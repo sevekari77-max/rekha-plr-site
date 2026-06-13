@@ -20,7 +20,7 @@ export function Navbar() {
 
           <div>
             <h2 className="text-3xl font-semibold text-navy-900">
-              Karmic Healing
+              Rekha Karmic Healing
             </h2>
 
             <p className="text-sm text-sage-600">
