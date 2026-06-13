@@ -7,10 +7,11 @@ import { ContactSection } from '@/components/sections/contact-section';
 import { FAQSection } from '@/components/sections/faq-section';
 import { FinalCTASection } from '@/components/sections/final-cta-section';
 import { Footer } from '@/components/sections/footer';
-
+import { Navbar } from '@/components/sections/navbar';
 export default function Home() {
   return (
     <main className="overflow-hidden">
+      <Navbar />
       <HeroSection />
       <AboutSection />
       <BenefitsSection />

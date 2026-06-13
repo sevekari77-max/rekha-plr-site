@@ -7,8 +7,8 @@ import Image from 'next/image';
 export function HeroSection() {
   return (
     <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-white via-lavender-50/30 to-sage-50/20 overflow-hidden">
-      
-      {/* Subtle decorative elements */}
+
+      {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-32 right-10 w-64 h-64 bg-lavender-100/40 rounded-full blur-3xl" />
         <div className="absolute bottom-32 left-10 w-80 h-80 bg-sage-100/30 rounded-full blur-3xl" />
@@ -21,7 +21,6 @@ export function HeroSection() {
           {/* LEFT SIDE */}
           <div className="text-center lg:text-left space-y-8">
 
-            {/* Main headline */}
             <h1 className="text-navy-900 leading-tight">
               Begin Your Journey of
               <span className="block mt-3 text-navy-800">
@@ -29,39 +28,47 @@ export function HeroSection() {
               </span>
             </h1>
 
-            {/* Subheadline */}
             <p className="text-xl md:text-2xl lg:text-3xl text-navy-600 leading-relaxed">
-              Professional guided Past Life Regression sessions in a safe, calm, and compassionate environment.
+              Professional guided Past Life Regression sessions in a safe,
+              calm, and compassionate environment.
             </p>
 
-            {/* Trust indicators */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-navy-500 text-lg">
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4 text-navy-500">
+
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-sage-500" />
+                <div className="w-8 h-8 rounded-full bg-sage-100 flex items-center justify-center">
+                  🛡️
+                </div>
                 Certified Practitioner
               </span>
 
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-gold-500" />
+                <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center">
+                  🍃
+                </div>
                 Safe Environment
               </span>
 
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-lavender-500" />
+                <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
+                  💜
+                </div>
                 Compassionate Guidance
               </span>
+
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-5 pt-6">
-              
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-5 pt-4">
+
               <Button
                 size="lg"
                 className="btn-primary text-xl px-12 py-7 h-auto"
                 onClick={() => {
-                  document.getElementById('booking')?.scrollIntoView({
-                    behavior: 'smooth',
-                  });
+                  document
+                    .getElementById('booking')
+                    ?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 <Calendar className="mr-3 h-6 w-6" />
@@ -75,7 +82,7 @@ export function HeroSection() {
                 asChild
               >
                 <a
-                  href="https://wa.me/916351433751?text=Hello!%20I%27m%20interested%20in%20learning%20more%20about%20Past%20Life%20Regression%20sessions."
+                  href="https://wa.me/916351433751"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -86,18 +93,19 @@ export function HeroSection() {
 
             </div>
 
-            {/* Scroll indicator */}
-            <div className="pt-12">
+            {/* Scroll Indicator */}
+            <div className="pt-10">
               <button
                 onClick={() => {
-                  document.getElementById('about')?.scrollIntoView({
-                    behavior: 'smooth',
-                  });
+                  document
+                    .getElementById('about')
+                    ?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="text-navy-400 hover:text-navy-600 transition-colors"
-                aria-label="Scroll to learn more"
               >
-                <span className="block text-sm mb-3">Learn More</span>
+                <span className="block text-sm mb-2">
+                  Learn More
+                </span>
 
                 <svg
                   className="w-6 h-6 mx-auto animate-bounce"
@@ -117,28 +125,62 @@ export function HeroSection() {
 
           </div>
 
-          {/* RIGHT SIDE IMAGE */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
+          {/* RIGHT SIDE CARD */}
+          <div className="relative flex justify-center lg:justify-end lg:-mt-6">
 
-              <Image
-                src="/images/rekha.jpeg"
-                alt="Rekha Vasant"
-                width={360}
-                height={480}
-                priority
-                className="rounded-3xl shadow-2xl object-cover"
-              />
+            <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden max-w-md">
 
-              <Image
-                src="/images/ipla-badge.png"
-                alt="IPLA Accredited"
-                width={90}
-                height={90}
-                className="absolute -top-6 -right-6 rounded-full shadow-xl"
-              />
+              <div className="relative">
+
+                <Image
+                  src="/images/rekha.jpeg"
+                  alt="Rekha Vasant Koranne"
+                  width={300}
+                  height={350}
+                  priority               
+                  className="w-full h-[420px] object-cover"
+                />
+
+                <Image
+                  src="/images/ipla-badge.png"
+                  alt="IPLA Accredited"
+                  width={65}
+                  height={65}
+                  className="absolute top-4 right-4 rounded-full shadow-lg"
+                />
+
+              </div>
+
+              <div className="text-center px-8 py-6">
+                <div className="flex items-center justify-center gap-3 mb-5">
+                <div className="h-px w-24 bg-yellow-300"></div>
+                <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+                <div className="h-px w-24 bg-yellow-300"></div>
+              </div>
+
+
+                <h3 className="text-4xl font-semibold text-navy-900">
+                  Rekha Vasant Koranne
+                </h3>
+
+                <p className="mt-3 text-xl text-sage-700">
+                  Certified PLR & Hypnotherapist
+                </p>
+
+                <p className="mt-2 text-base text-navy-500">
+                  IPLA Accredited Practitioner
+                </p>
+
+                <div className="flex items-center justify-center gap-3 mt-5">
+                  <div className="h-px w-16 bg-yellow-300"></div>
+                  <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+                  <div className="h-px w-16 bg-yellow-300"></div>
+                </div>
+
+              </div>
 
             </div>
+
           </div>
 
         </div>
