@@ -4,6 +4,7 @@ import { Playfair_Display, Open_Sans } from 'next/font/google';
 import { Toaster } from '@/components/ui/sonner';
 import { WhatsAppButton } from '@/components/whatsapp-button';
 import { MobileStickyBook } from '@/components/mobile-sticky-book';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -64,6 +65,7 @@ export default function RootLayout({
         <WhatsAppButton />
         <MobileStickyBook />
         <Toaster position="top-center" />
+        <SpeedInsights />
       </body>
     </html>
   );
